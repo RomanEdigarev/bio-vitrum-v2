@@ -1,0 +1,56 @@
+.first-section {
+  position: relative;
+  height: calc(100vh - 75px);
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+
+  &__btn {
+    width: 60px;
+    height: 60px;
+    position: absolute;
+    bottom: 10.78%;
+  }
+
+  &__navigation {
+    border: 1px solid black;
+    width: 65.82%;
+    height: 205px;
+  }
+}
+
+.titles-container {
+  position: absolute;
+  top: 25%;
+  display: flex;
+}
+
+.main-title {
+  font-size: 1.875vw;
+  line-height: 1.13;
+  text-transform: uppercase;
+  color: #303030;
+  flex: 0.3;
+}
+
+.line {
+  position: relative;
+  width: 23.125vw;
+  margin: 0 4.185vw;
+  flex: 0.3;
+  div {
+    position: absolute;
+    top: 13%;
+    width: 100%;
+    height: 0;
+    border-top: 1px solid black;
+    opacity: 0.4;
+  }
+}
+
+.subtitle {
+  font-size: 1vw;
+  font-weight: 500;
+  flex: 0.3;
+  color: #303030;
+}

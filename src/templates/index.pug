@@ -12,5 +12,20 @@ block content
             .first-section__btn
                 +ScrollDownButton
             .first-section__navigation
-                +Navigation(data.index.navigation.links)
+                +Navigation(data.navigation.links)
+        .second-section
+            .second-section__title-container
+                h2.second-section__title Деятельность
+            .second-section__links
+                each val, key in data.activity.links
+                    .second-section__link
+                        +UnderlineLink(val, key, "large")
 
+        .third-section
+            .third-section__first-block.block
+                .third-section__title-container
+                    h2 Сервисы
+            .third-section__second-block.block
+                img(src="./assets/images/1.png")
+
+            .third-section__third-block.block

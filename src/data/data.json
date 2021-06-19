@@ -1,12 +1,20 @@
 {
-  "index": {
-    "navigation": {
-      "links": {
-        "product": "Продукция",
-        "directions": "Направления",
-        "about": "О компании",
-        "contacts": "Контакты"
-      }
+  "navigation": {
+    "links": {
+      "product": "Продукция",
+      "directions": "Направления",
+      "about": "О компании",
+      "contacts": "Контакты"
+    }
+  },
+  "activity": {
+    "links": {
+      "morphology" : "Морфология",
+      "digital-products": "Цифровые продукты",
+      "life-science": "Life science",
+      "cytology": "Цитология",
+      "microbiology": "Микробиология",
+      "microscopy": "Микроскопия"
     }
   }
 }

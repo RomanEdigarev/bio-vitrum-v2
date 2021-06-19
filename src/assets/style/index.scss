@@ -1,3 +1,5 @@
+@import './core-styles/core-styles';
+
 .first-section {
   position: relative;
   height: calc(100vh - 75px);
@@ -16,6 +18,9 @@
     border: 1px solid black;
     width: 65.82%;
     height: 205px;
+    position: absolute;
+    bottom: 0;
+    right: -6.28%;
   }
 }
 
@@ -29,7 +34,7 @@
   font-size: 1.875vw;
   line-height: 1.13;
   text-transform: uppercase;
-  color: #303030;
+  color: $clr-beta;
   flex: 0.3;
 }
 
@@ -52,5 +57,5 @@
   font-size: 1vw;
   font-weight: 500;
   flex: 0.3;
-  color: #303030;
+  color: $clr-beta;
 }

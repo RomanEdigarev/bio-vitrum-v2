@@ -1,0 +1,6 @@
+mixin Navigation(links)
+    nav.navigation
+        .navigation__links
+          each val, key in links
+              +UnderlineLink(val, key, "small")
+        .navigation__video video

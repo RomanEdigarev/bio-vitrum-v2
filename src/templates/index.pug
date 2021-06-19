@@ -1,4 +1,16 @@
 extends ../layouts/base.pug
 
 block content
-    h1 this is content
+    main.main
+        .first-section
+            .titles-container
+                .main-title
+                    h1  Диагностика спасающая жизни
+                .line
+                    div
+                .subtitle Для нас каждый клинический <br/> случай –это жизнь и судьба реального человека
+            .first-section__btn
+                +ScrollDownButton
+            .first-section__navigation
+                +Navigation(data.index.navigation.links)
+

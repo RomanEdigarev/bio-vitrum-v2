@@ -1,0 +1,12 @@
+{
+  "index": {
+    "navigation": {
+      "links": {
+        "product": "Продукция",
+        "directions": "Направления",
+        "about": "О компании",
+        "contacts": "Контакты"
+      }
+    }
+  }
+}

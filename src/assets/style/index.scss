@@ -96,4 +96,12 @@
   &__first-block, &__second-block, &__third-block {
     height: 100%;
   }
+
+  &__first-block, &__third-block {
+    flex: 0.3
+  }
+
+  &__second-block {
+    flex: 0.4
+  }
 }

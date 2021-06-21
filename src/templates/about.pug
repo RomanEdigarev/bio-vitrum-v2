@@ -1,5 +1,15 @@
+
 extends ../layouts/base
 
 block content
-    main.main.main-about
-        +TitleWithLine("О компании", "Наша миссия - диагностика <br/> спасающая жизнь!")
+    -var about = data.about
+    main.main
+        section.prolog-about
+            +TitleWithLine(about.title, "Наша миссия - диагностика <br/> спасающая жизнь!")
+            .prolog-about__content
+                .prolog-about__navigation
+                    each val, key in about.links
+                        +UnderlineLink(val, key, "small", "left")
+                .prolog-about__information
+                    p=about.info.text
+                    a(href=about.info.link) Подробнее

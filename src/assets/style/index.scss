@@ -1,5 +1,8 @@
 @import './core-styles/core-styles';
 
+.main-index {
+  margin-top: 0 !important;
+}
 .first-section {
   position: relative;
   height: calc(100vh - 75px);

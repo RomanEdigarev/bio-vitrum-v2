@@ -1,7 +1,7 @@
 extends ../layouts/indexBase
 
 block content
-    main.main
+    main.main.main-index
         section.first-section
             .titles-container
                 +TitleWithLine("Диагностика спасающая жизни", "Для нас каждый клинический <br/> случай – это жизнь и судьба реального человека")
@@ -16,7 +16,6 @@ block content
                 each val, key in data.activity.links
                     .second-section__link
                         +UnderlineLink(val, key, "large", "left")
-
         section.third-section
             +ServicesBlock
         section.fourth-section

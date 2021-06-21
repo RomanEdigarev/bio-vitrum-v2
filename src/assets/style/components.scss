@@ -171,6 +171,7 @@
 
 // **** Footer **** //
 .footer {
+  position: relative;
   display: flex;
   justify-content: space-between;
   margin-bottom: 50px;
@@ -223,6 +224,15 @@
   &__copyright {
     display: flex;
     justify-content: space-between;
+  }
+
+  &__btn-container {
+    position: absolute;
+    width: 60px;
+    height: 60px;
+    transform: translateY(-100%);
+    top: -41px;
+    right: 47px;
   }
 }
 // **** Footer End **** //

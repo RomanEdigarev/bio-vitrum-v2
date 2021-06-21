@@ -1,0 +1,15 @@
+mixin Footer
+    footer.footer
+        .footer__left
+            .footer__title=data.footer.title
+            form.footer__form
+                .footer__form__input-container
+                    +AlphaInput("email")
+                span Нажимая кнопку отправить вы даете свое согласие на обработку персональных данных
+        .footer__right
+            .footer__links
+                each val, key in data.footer.links
+                    a.footer__link(href=key)=val
+            .footer__copyright
+                each val in data.footer.copyright
+                    span=val

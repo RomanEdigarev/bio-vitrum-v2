@@ -2,7 +2,7 @@ extends ../layouts/base.pug
 
 block content
     main.main
-        .first-section
+        section.first-section
             .titles-container
                 .main-title
                     h1  Диагностика спасающая жизни
@@ -13,19 +13,44 @@ block content
                 +ScrollDownButton
             .first-section__navigation
                 +Navigation(data.navigation.links)
-        .second-section
+        section.second-section
             .second-section__title-container
                 h2.second-section__title Деятельность
             .second-section__links
                 each val, key in data.activity.links
                     .second-section__link
-                        +UnderlineLink(val, key, "large")
+                        +UnderlineLink(val, key, "large", "left")
 
-        .third-section
-            .third-section__first-block.block
-                .third-section__title-container
-                    h2 Сервисы
-            .third-section__second-block.block
-                img(src="./assets/images/1.png")
+        section.third-section
+            .third-section__left.block
+                .third-section__text-block
+                    .third-section__title-container
+                        h2=data.services.title
+                    .third-section__text
+                        p=data.services.text
+                .third-section__image-container
+                    img(src="./assets/images/1.png")
+            .third-section__right.block
+                .third-section__links
+                    each val, key in data.services.links
+                        .third-section__link
+                            +UnderlineLink(val, key, "large", "right")
 
-            .third-section__third-block.block
+        section.fourth-section
+            .fourth-section__left.block
+                .fourth-section__image-container
+                    img(src="./assets/images/2.png")
+                .fourth-section__text-block
+                    .fourth-section__title-container
+                        h2=data.news.title
+                    .fourth-section__current-link
+                        a(href=`/news/${data.news.currentNews.id}`)=data.news.currentNews.title
+                        .fourth-section__current-link.date
+                            span=data.news.currentNews.date
+            .fourth-section__right.block
+                .fourth-section__links
+                    each item in data.news.items
+                        .fourth-section__link
+                            a(href=`/news/${item.id}`)=item.title
+                            .fourth-section__link.date
+                                span=item.date

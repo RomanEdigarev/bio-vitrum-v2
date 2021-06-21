@@ -1,2 +1,2 @@
-mixin UnderlineLink(title, ref, size)
-     a.underline-link(href=ref, class=`underline-link--${size}`)=title.toUpperCase()
+mixin UnderlineLink(title, ref, size, linePosition)
+     a.underline-link(href=ref, class=`underline-link--${size} ${linePosition}`)=title.toUpperCase()

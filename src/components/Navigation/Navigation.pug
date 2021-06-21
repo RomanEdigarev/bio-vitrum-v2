@@ -2,6 +2,6 @@ mixin Navigation(links)
     nav.navigation
         .navigation__links
           each val, key in links
-              +UnderlineLink(val, key, "small")
+              +UnderlineLink(val, key, "small", "left")
         .navigation__video-container
             iframe.navigation__video(width="956" height="538" src="https://www.youtube.com/embed/GROhB0CS1Jk" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay=0; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen)

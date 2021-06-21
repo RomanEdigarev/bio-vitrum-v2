@@ -1,8 +1,12 @@
-mixin Header
+mixin Header(isIndex=false)
     header.header
         .heder__logo
             a(href="/")
                 include logo
+        if !isIndex
+            .header__navigation
+                each val, key in data.navigation.links
+                    +UnderlineLink(val, key, "small", "left")
         .header__links
             a.header__link.left-link(href="")
                 svg(width="13"

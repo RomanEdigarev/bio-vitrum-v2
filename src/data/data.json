@@ -63,5 +63,23 @@
       "@ biovitrum.ru, 2020",
       "Разработка сайта –  Cake.ru"
     ]
+  },
+  "about": {
+    "title" : "",
+    "subtitle": "",
+    "firstSection" : {
+      "title":"",
+      "items": [
+        {
+          "title": "",
+          "text": ""
+        }
+      ],
+      "block": {
+        "title": "",
+        "text": "",
+        "link": ""
+      }
+    }
   }
 }

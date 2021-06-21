@@ -1,0 +1,14 @@
+mixin ServicesBlock()
+    .services-block__left.block
+        .services-block__text-block
+            .services-block__title-container
+                h2=data.services.title
+            .services-block__text
+                p=data.services.text
+        .services-block__image-container
+            img(src="./assets/images/1.png")
+    .services-block__right.block
+        .services-block__links
+            each val, key in data.services.links
+                .services-block__link
+                    +UnderlineLink(val, key, "large", "right")

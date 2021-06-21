@@ -1,0 +1,18 @@
+mixin NewsBlock
+    .news-block__left.block
+        .news-block__image-container
+            img(src="./assets/images/2.png")
+        .news-block__text-block
+            .news-block__title-container
+                h2=data.news.title
+            .news-block__current-link
+                a(href=`/news/${data.news.currentNews.id}`)=data.news.currentNews.title
+                .news-block__current-link.date
+                    span=data.news.currentNews.date
+    .news-block__right.block
+        .news-block__links
+            each item in data.news.items
+                .news-block__link
+                    a(href=`/news/${item.id}`)=item.title
+                    .news-block__link.date
+                        span=item.date

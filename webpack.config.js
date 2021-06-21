@@ -14,10 +14,23 @@ const generateHtmlPlugins = () => {
     const parts = item.split(".");
     const name = parts[0];
     const extension = parts[1];
-    return new HtmlWebpackPlugin({
-      filename: `${name}.html`,
-      template: path.resolve(__dirname, `${templatesDir}/${name}.${extension}`),
-    });
+    if (name === "index") {
+      return new HtmlWebpackPlugin({
+        filename: `${name}.html`,
+        template: path.resolve(
+          __dirname,
+          `${templatesDir}/${name}.${extension}`
+        ),
+      });
+    } else {
+      return new HtmlWebpackPlugin({
+        filename: `${name}/index.html`,
+        template: path.resolve(
+          __dirname,
+          `${templatesDir}/${name}.${extension}`
+        ),
+      });
+    }
   });
   return plugins;
 };
@@ -50,10 +63,10 @@ module.exports = {
         test: /\.(png|jpe?g|gif)$/i,
         use: [
           {
-            loader: 'file-loader',
+            loader: "file-loader",
             options: {
               name: "[name].[ext]",
-              outputPath: 'assets/images',
+              outputPath: "assets/images",
             },
           },
         ],

@@ -13,3 +13,26 @@ block content
                 .prolog-about__information
                     p=about.info.text
                     a(href=about.info.link) Подробнее
+        section.first-section-about
+            .first-section-about__title-container
+                h2=about.firstSection.title
+            .first-section-about__items
+                each item in about.firstSection.items
+                    .first-section-about__item
+                        .first-section-about__item__title
+                            +UnderlineLink(item.title, "", "large", "left")
+                        .first-section-about__item__text
+                            p=item.text
+        section.second-section-about
+            .second-section-about__blocks-container
+                .second-section-about__blocks-container__left.block
+                    .second-section-about__blocks-container__title-container
+                        span.second-section-about__blocks-container__title=about.secondSection.block.title
+                    .second-section-about__blocks-container__text-container
+                        .second-section-about__blocks-container__text!=about.secondSection.block.text
+                    .second-section-about__blocks-container__link-container
+                        each val, key in about.secondSection.block.link
+                            a.second-section-about__blocks-container__link(href=key)=val
+                .second-section-about__blocks-container__right.block
+                    .second-section-about__blocks-container__image-container
+                        img.second-section-about__blocks-container__image(src=about.secondSection.block.img)

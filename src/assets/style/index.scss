@@ -9,6 +9,7 @@
   width: 100%;
   display: flex;
   flex-direction: column;
+  margin-bottom: 125px;
 
   &__btn {
     width: 60px;
@@ -125,4 +126,13 @@
 
 .fourth-section {
   height: 500px;
+}
+
+.index-bg-image {
+  position: absolute;
+  width: 57vw;
+  top: 50vh;
+  left: 50%;
+  z-index: -10;
+  transform: translateX(-50%) translateY(-50%);
 }

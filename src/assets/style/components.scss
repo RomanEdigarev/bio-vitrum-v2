@@ -178,12 +178,18 @@
 // **** GlobalLink  End **** //
 
 // **** Scroll-down-btn **** //
-.scroll-down-btn {
+.scroll-down-btn, .scroll-up-btn {
   width: 100%;
   height: 100%;
   border-radius: 50%;
   border: 1px solid $clr-alpha;
   padding: 0 23px;
+  cursor: pointer;
+}
+
+.scroll-up-btn {
+  background-color: $clr-alpha;
+  padding: 0 18px;
 }
 
 // **** Scroll-down-btn End **** //
@@ -384,6 +390,7 @@
     transform: translateY(-100%);
     top: -41px;
     right: 47px;
+    cursor: pointer;
   }
 }
 // **** Footer End **** //

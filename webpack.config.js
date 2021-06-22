@@ -21,6 +21,7 @@ const generateHtmlPlugins = () => {
           __dirname,
           `${templatesDir}/${name}.${extension}`
         ),
+        inject: "body",
       });
     } else {
       return new HtmlWebpackPlugin({
@@ -29,6 +30,7 @@ const generateHtmlPlugins = () => {
           __dirname,
           `${templatesDir}/${name}.${extension}`
         ),
+        inject: "body",
       });
     }
   });

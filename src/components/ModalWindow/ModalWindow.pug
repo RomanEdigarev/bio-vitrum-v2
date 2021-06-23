@@ -1,0 +1,19 @@
+mixin ModalWindowTitle(title, subtitle, linkText, ref)
+    .modal-window__title=title
+    span.modal-window__subtitle=subtitle + " "
+    a.modal-window__link(href=ref)=linkText
+
+
+
+
+mixin ModalWindow(textButton, modalId, title, subtitle, linkText, ref)
+    .modal-window(id=modalId)
+        .modal-window__wrapper
+            .modal-window__title-container
+                +ModalWindowTitle(title, subtitle, linkText, ref)
+            .modal-window__content-container
+                block
+                .modal-window__btn-container
+                    +AlphaButton(textButton)
+        .modal-window__close-btn-container
+            button(id=modalId + "-close-btn") CLose

@@ -6,7 +6,7 @@
   "scripts": {
     "clean": "rimraf build",
     "serve:webpack": "webpack serve",
-    "build:webpack": "webpack --mode production",
+    "build:webpack": "webpack --mode development",
     "build": "run-s clean build:*",
     "serve": "run-s clean serve:*"
   },

@@ -10,11 +10,12 @@ html(lang="ru")
         link(rel="preconnect" href="https://fonts.gstatic.com")
         link(href="https://fonts.googleapis.com/css2?family=Montserrat:wght@200;300;400;500&display=swap" rel="stylesheet")
         title "Bio Vitrum"
-
     body
-        +Sidebar
         .app-container
             +Header(false)
             block content
             +Footer
+        +Sidebar
+        +ModalWindow("Тест", "message", "Title", "subtitle" ,"linkText", "ref")
+            h1 Модальное окно
 
